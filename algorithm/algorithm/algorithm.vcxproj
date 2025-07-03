@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="boj10830.cpp" />
     <ClCompile Include="boj11729.cpp" />
     <ClCompile Include="boj1300.cpp" />
     <ClCompile Include="boj14502.cpp">
