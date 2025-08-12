@@ -1,10 +1,10 @@
 #include<iostream>
 #include<string>
-#include<stack>
+#include<queue>
 
 using namespace std;
 
-stack<int> q;
+queue<int> q;
 void push() {
 	int num;
 	cin >> num;
@@ -13,7 +13,7 @@ void push() {
 }
 
 void pop() {
-	cout << (q.empty() ? -1 : q.top()) << "\n";
+	cout << (q.empty() ? -1 : q.front()) << "\n";
 	if (q.empty() == false) q.pop();
 }
 
@@ -25,8 +25,12 @@ void empty() {
 	cout << (q.empty() ? "1" : "0") << "\n";
 }
 
-void top() {
-	cout << (q.empty() ? -1 : q.top()) << "\n";
+void front() {
+	cout << (q.empty() ? -1 : q.front()) << "\n";
+}
+
+void back() {
+	cout << (q.empty() ? -1 : q.back()) << "\n";
 }
 
 int main() {
@@ -41,6 +45,7 @@ int main() {
 		else if (input == "pop") pop();
 		else if (input == "size") size();
 		else if (input == "empty") empty();
-		else if (input == "top") top();
+		else if (input == "front") front();
+		else if (input == "back") back();
 	}
 }
